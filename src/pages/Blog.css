@@ -1,0 +1,277 @@
+.blog-page {
+  background: #1a1f4d;
+  padding: 6rem 4rem;
+  min-height: 100vh;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.blog-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.blog-header p {
+  color: #fff;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.categories {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.categories span {
+  color: #fff;
+}
+
+.categories a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.categories a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background: #2a3166;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.blog-card {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 1.5rem;
+}
+
+.blog-content h3 {
+  color: #1a1f4d;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.blog-content p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.blog-meta {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  color: #1a1f4d;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid #1a1f4d;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background: #1a1f4d;
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.pagination button,
+.current-page {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.current-page {
+  background: #2a3166;
+}
+
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-page {
+    padding: 4rem 2rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
+
+/* Add these footer styles to Blog.css */
+.footer-section {
+  background: #1a1f4d;
+  padding: 4rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-column {
+  color: #fff;
+}
+
+.footer-column h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.footer-column p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+.footer-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-form input {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.footer-form button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #2a3166;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-form button:hover {
+  background: #3a4186;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #646cff;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 3rem 2rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
