@@ -152,12 +152,12 @@ function Home() {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h3>Backend Developer - CV Technopartner Indonesia - Employee</h3>
-                <span className="timeline-date">Apr 2023 - Nov 2023</span>
+                <h3>Study Assistant - PGRI University of Yogyakarta - Internship</h3>
+                <span className="timeline-date">Oct 2022 - Dec 2022</span>
                 <ul>
-                  <li>Develop API Integration E-Commerce to Lazada (Golang Echo)</li>
-                  <li>Develop API Internal System Laravel</li>
-                  <li>Create API Internal Project management Laravel</li>
+                  <li>Management Website Program Study Elektromedis Universitas PGRI Yogyakarta</li>
+                  <li>Management Website Program Study Teknik Informatika Universitas PGRI Yogyakarta</li>
+                  <li>Design Poster Promosi Program Study Elektromedis</li>
                   <li>Develop API Multi Cloud Credential Laravel</li>
                   <li>Create API Project Electronic Car Charging and Implementation Payment Gateway Midtrans (Go Gin)</li>
                 </ul>
@@ -167,13 +167,13 @@ function Home() {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h3>Junior Software Engineer - Excelsia Learning Center (ELC) - Internship</h3>
-                <span className="timeline-date">Nov 2021 - Feb 2022</span>
+                <h3>Data Entry Assistant - PT. IZZ Griya Media Nusantara - Employee</h3>
+                <span className="timeline-date">Feb 2022 - Jun 2022</span>
                 <ul>
-                  <li>Design and develop application systems and web apps</li>
-                  <li>Synthesize business requirements into design</li>
-                  <li>Collaborate with product and UI/UX teams to execute development plans</li>
-                  <li>Research new technologies for ELC services</li>
+                  <li>Collaborate with team to make a good business</li>
+                  <li>Handle data to posting at platform media</li>
+                  <li>Inputting text, numbers, or other data into databases, spreadsheets, or software. </li>
+                  <li>Entering and updating records in databases (e.g., CRM systems, ERP software).</li>
                 </ul>
               </div>
             </div>
