@@ -1,9 +1,11 @@
-import { useEffect } from "react";
-import { FaTwitter, FaInstagram, FaYoutube, FaThreads, FaGithub, FaAndroid, FaFacebook, FaLinkedin } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import { FaTwitter, FaInstagram, FaYoutube, FaThreads, FaGithub, FaAndroid, FaFacebook, FaLinkedin, FaArrowUp } from "react-icons/fa6";
 import "./Home.css";
 import "../styles/animations.css";
 
 function Home() {
+  const [showScroll, setShowScroll] = useState(false);
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.2,
@@ -24,6 +26,43 @@ function Home() {
       animatedElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
+
+  useEffect(() => {
+    const checkScrollTop = () => {
+      if (!showScroll && window.pageYOffset > 400) {
+        setShowScroll(true);
+      } else if (showScroll && window.pageYOffset <= 400) {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", checkScrollTop);
+    return () => window.removeEventListener("scroll", checkScrollTop);
+  }, [showScroll]);
+
+  const scrollProjects = (direction) => {
+    const container = document.querySelector(".projects-grid");
+    const scrollAmount = container.clientWidth / 2; // Scroll half the container width
+
+    if (direction === "left") {
+      container.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth",
+      });
+    } else {
+      container.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="home">
@@ -189,45 +228,68 @@ function Home() {
       {/* Portfolio Section */}
       <section id="portfolio" className="projects-section">
         <h2 className="section-title animate fade-in-up">Project Result</h2>
-        <div className="projects-grid">
-          <div className="project-card animate fade-in-up delay-1">
-            <div className="project-image">
-              <img src="/src/assets/projects/project1.jpg" alt="Sistem Manajemen Arsip UMY" />
+        <div className="projects-container">
+          <button className="scroll-button left" onClick={() => scrollProjects("left")}>
+            &#8249;
+          </button>
+
+          <div className="projects-grid">
+            <div className="project-card animate fade-in-up delay-1">
+              <div className="project-image">
+                <img src="/src/assets/projects/mintira.jpg" alt="Sistem Manajemen Arsip UMY" />
+              </div>
+              <div className="project-content">
+                <h3>Sistem Manajemen Arsip UMY</h3>
+                <p>Sistem Manajemen Arsip adalah pekerjaan menyimpan surat atau dokumen-dokumen kegiatan-kegiatan yang...</p>
+                <a href="#" className="read-more">
+                  Read More
+                </a>
+              </div>
             </div>
-            <div className="project-content">
-              <h3>Sistem Manajemen Arsip UMY</h3>
-              <p>Sistem Manajemen Arsip adalah pekerjaan menyimpan surat atau dokumen-dokumen kegiatan-kegiatan yang...</p>
-              <a href="#" className="read-more">
-                Read More
-              </a>
+
+            <div className="project-card animate fade-in-up delay-2">
+              <div className="project-image">
+                <img src="/src/assets/projects/mintira.jpg" alt="Sistem Informasi Sekolah" />
+              </div>
+              <div className="project-content">
+                <h3>Sistem Informasi Sekolah</h3>
+                <p>Sistem Informasi Sekolah dengan Laravel dan Vue. Solusi Mudah untuk Menyebarkan Informasi Sekolah/Sis...</p>
+                <a href="#" className="read-more">
+                  Read More
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card animate fade-in-up delay-3">
+              <div className="project-image">
+                <img src="/src/assets/projects/mintira.jpg" alt="Official Web Landing Page Organization" />
+              </div>
+              <div className="project-content">
+                <h3>Official Web Landing Page Organization</h3>
+                <p>Official Web Landing Page Organization dibuat menggunakan laravel 7 &nbsp;...</p>
+                <a href="#" className="read-more">
+                  Read More
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card animate fade-in-up delay-3">
+              <div className="project-image">
+                <img src="/src/assets/projects/mintira.jpg" alt="Official Web Landing Page Organization" />
+              </div>
+              <div className="project-content">
+                <h3>Official Web Landing Page Organization</h3>
+                <p>Official Web Landing Page Organization dibuat menggunakan laravel 7 &nbsp;...</p>
+                <a href="#" className="read-more">
+                  Read More
+                </a>
+              </div>
             </div>
           </div>
 
-          <div className="project-card animate fade-in-up delay-2">
-            <div className="project-image">
-              <img src="/src/assets/projects/project1.jpg" alt="Sistem Informasi Sekolah" />
-            </div>
-            <div className="project-content">
-              <h3>Sistem Informasi Sekolah</h3>
-              <p>Sistem Informasi Sekolah dengan Laravel dan Vue. Solusi Mudah untuk Menyebarkan Informasi Sekolah/Sis...</p>
-              <a href="#" className="read-more">
-                Read More
-              </a>
-            </div>
-          </div>
-
-          <div className="project-card animate fade-in-up delay-3">
-            <div className="project-image">
-              <img src="/src/assets/projects/project1.jpg" alt="Official Web Landing Page Organization" />
-            </div>
-            <div className="project-content">
-              <h3>Official Web Landing Page Organization</h3>
-              <p>Official Web Landing Page Organization dibuat menggunakan laravel 7 &nbsp;...</p>
-              <a href="#" className="read-more">
-                Read More
-              </a>
-            </div>
-          </div>
+          <button className="scroll-button right" onClick={() => scrollProjects("right")}>
+            &#8250;
+          </button>
         </div>
       </section>
 
@@ -235,9 +297,9 @@ function Home() {
       <footer className="footer-section">
         <div className="footer-container">
           <div className="footer-column">
-            <h3>About Us</h3>
+            <h3>About Me</h3>
             <p>Thanks for visit my personal web</p>
-            <p className="copyright">Copyright © 2025 All rights reserved | created by Laili Septiandi</p>
+            <p className="copyright">Copyright © 2025 All rights reserved | created by Muhamad Firdaus</p>
           </div>
 
           <div className="footer-column">
@@ -252,7 +314,7 @@ function Home() {
           </div>
 
           <div className="footer-column">
-            <h3>Follow Us</h3>
+            <h3>Follow Me</h3>
             <p>Let us be social</p>
             <div className="social-icons">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
