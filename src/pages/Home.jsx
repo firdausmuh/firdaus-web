@@ -137,13 +137,30 @@ function Home() {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h3>Golang Developer - PT. Asia Hakarya Abadi - Employee</h3>
-                <span className="timeline-date">Oct 2023 - Now</span>
+                <h3>Mobil Development - Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka - Internship</h3>
+                <span className="timeline-date">Aug 2023 - Jan 2024</span>
                 <ul>
-                  <li>Fix and refactor existing code ERP System</li>
-                  <li>Develop a new API module ERP System</li>
-                  <li>Set up the base project point of sale (POS) and implement microservices using architecture using gRPC</li>
-                  <li>Apply clean code principles across the project</li>
+                  <li>Online Self-paced Learning : Basic Kotlin, Android for Beginner, Fundamental Android, SOLID Pardigm, Intermediete Android, Android Jetpack Compose.</li>
+                  <li>Online Synchronous Sessions</li>
+                  <li>Reflection & Consultation</li>
+                  <li>Capstone Project buld Application Mobile</li>
+                  <li>And etc.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <h3>Talent Management System - PT. BFI Finance Indonesia - Internship as Employee</h3>
+                <span className="timeline-date">Sep 2022 - Sep 2023</span>
+                <ul>
+                  <li>Participating in the planning and execution of talent management-related projects.</li>
+                  <li>Ensuring projects align with company goals and policies.</li>
+                  <li>Collaborating with the team to identify Key Performance Indicators (KPIs) related to talent.</li>
+                  <li>Understanding evaluation parameters for talent success and growth.</li>
+                  <li>Developing an in-depth understanding of talent management information needs.</li>
+                  <li>Build System Monitoring Talent with Power BI</li>
                   <li>And etc.</li>
                 </ul>
               </div>

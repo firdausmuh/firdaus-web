@@ -528,8 +528,8 @@
 /* Experience Timeline Styles */
 .experience-section {
   max-width: 1400px;
-  margin: 6rem auto 0;
-  padding-top: 4rem;
+  margin: 4rem auto 0;
+  padding-top: 1rem;
   border-top: 1px solid #eee;
 }
 
@@ -590,7 +590,7 @@
   padding: 0.5rem 1rem;
   background: #646cff;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 30px;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
