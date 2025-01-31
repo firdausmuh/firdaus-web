@@ -102,22 +102,22 @@
 
 .experience-badge {
   position: absolute;
-  top: 2rem;
-  right: -2rem;
+  top: 1rem;
+  right: -1rem;
   background: #ff6b6b;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
   color: white;
   text-align: center;
 }
 
 .experience-badge h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
 }
 
 .experience-badge h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 /* Services Grid */
@@ -158,14 +158,14 @@
 /* Skills Section */
 .skills-section {
   width: 100%;
-  padding: 6rem 4rem;
+  padding: 2rem 4rem 4rem;
   background: #fff;
   text-align: center;
 }
 
 .skills-section .section-title {
   color: #333;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .skills-grid {
@@ -173,13 +173,13 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .skills-row {
   display: flex;
   justify-content: center;
-  gap: 10rem;
+  gap: 6rem;
   flex-wrap: wrap;
 }
 
@@ -196,9 +196,10 @@
 }
 
 .skill-icon img {
-  width: 80px;
-  height: 80px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .skill-icon span {
@@ -231,16 +232,17 @@
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  gap: 2rem;
-  padding: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 1.5rem;
+  padding: 0.8rem;
   scroll-snap-type: x mandatory;
 }
 
 .project-card {
   scroll-snap-align: start;
-  min-width: 350px; /* Set minimum width for cards */
+  min-width: 300px;
+  max-width: 320px;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -254,7 +256,7 @@
 
 .project-image {
   width: 100%;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -270,24 +272,25 @@
 }
 
 .project-content {
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 .project-content h3 {
   color: #333;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
 }
 
 .project-content p {
   color: #666;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
 }
 
 .read-more {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
   background: #475569;
   color: #fff;
   text-decoration: none;
@@ -368,8 +371,8 @@
   }
 
   .skill-icon img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
   }
 
   .projects-container {
@@ -397,8 +400,8 @@
   }
 
   .skill-icon img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
   }
 
   .projects-section {
@@ -836,14 +839,15 @@
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
-  gap: 2rem;
-  padding: 1rem;
+  gap: 1.5rem;
+  padding: 0.8rem;
   scroll-snap-type: x mandatory;
 }
 
 .project-card {
   scroll-snap-align: start;
-  min-width: 350px; /* Set minimum width for cards */
+  min-width: 300px;
+  max-width: 320px;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -857,7 +861,7 @@
 
 .project-image {
   width: 100%;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -873,24 +877,25 @@
 }
 
 .project-content {
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 .project-content h3 {
   color: #333;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
 }
 
 .project-content p {
   color: #666;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
 }
 
 .read-more {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
   background: #475569;
   color: #fff;
   text-decoration: none;
@@ -900,4 +905,149 @@
 
 .read-more:hover {
   background: #334155;
+}
+
+/* Add Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalFadeIn 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  z-index: 1;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-body img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-body h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.project-details h3 {
+  color: #333;
+  margin: 1.5rem 0 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.feature-list {
+  list-style: disc;
+  margin-left: 1.5rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.demo-link,
+.github-link {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.demo-link {
+  background: #475569;
+  color: white;
+}
+
+.github-link {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.demo-link:hover,
+.github-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .demo-link,
+  .github-link {
+    text-align: center;
+  }
 }

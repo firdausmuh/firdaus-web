@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { FaTwitter, FaInstagram, FaYoutube, FaThreads, FaGithub, FaAndroid, FaFacebook, FaLinkedin, FaArrowUp } from "react-icons/fa6";
 import "./Home.css";
 import "../styles/animations.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [showScroll, setShowScroll] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -63,6 +65,22 @@ function Home() {
       behavior: "smooth",
     });
   };
+
+  const projects = [
+    {
+      id: 1,
+      title: "Sistem Manajemen Arsip UMY",
+      shortDescription: "Sistem Manajemen Arsip adalah pekerjaan menyimpan surat atau dokumen-dokumen kegiatan-kegiatan yang...",
+      fullDescription:
+        "Sistem Manajemen Arsip adalah pekerjaan menyimpan surat atau dokumen-dokumen kegiatan-kegiatan yang dilakukan oleh Universitas Muhammadiyah Yogyakarta. Sistem ini membantu dalam pengarsipan, pencarian, dan pengelolaan dokumen secara efisien.",
+      technologies: ["Laravel", "MySQL", "Bootstrap", "jQuery"],
+      features: ["Manajemen dokumen digital", "Pencarian dokumen", "Kategorisasi arsip", "Laporan dan statistik"],
+      image: "/src/assets/projects/mintira.jpg",
+      demoLink: "#",
+      githubLink: "#",
+    },
+    // Add other projects...
+  ];
 
   return (
     <div className="home">
@@ -251,57 +269,20 @@ function Home() {
           </button>
 
           <div className="projects-grid">
-            <div className="project-card animate fade-in-up delay-1">
-              <div className="project-image">
-                <img src="/src/assets/projects/mintira.jpg" alt="Sistem Manajemen Arsip UMY" />
+            {projects.map((project) => (
+              <div key={project.id} className="project-card animate fade-in-up">
+                <div className="project-image">
+                  <img src={project.image} alt={project.title} />
+                </div>
+                <div className="project-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.shortDescription}</p>
+                  <Link to={`/project/${project.id}`} className="read-more">
+                    Read More
+                  </Link>
+                </div>
               </div>
-              <div className="project-content">
-                <h3>Sistem Manajemen Arsip UMY</h3>
-                <p>Sistem Manajemen Arsip adalah pekerjaan menyimpan surat atau dokumen-dokumen kegiatan-kegiatan yang...</p>
-                <a href="#" className="read-more">
-                  Read More
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card animate fade-in-up delay-2">
-              <div className="project-image">
-                <img src="/src/assets/projects/mintira.jpg" alt="Sistem Informasi Sekolah" />
-              </div>
-              <div className="project-content">
-                <h3>Sistem Informasi Sekolah</h3>
-                <p>Sistem Informasi Sekolah dengan Laravel dan Vue. Solusi Mudah untuk Menyebarkan Informasi Sekolah/Sis...</p>
-                <a href="#" className="read-more">
-                  Read More
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card animate fade-in-up delay-3">
-              <div className="project-image">
-                <img src="/src/assets/projects/mintira.jpg" alt="Official Web Landing Page Organization" />
-              </div>
-              <div className="project-content">
-                <h3>Official Web Landing Page Organization</h3>
-                <p>Official Web Landing Page Organization dibuat menggunakan laravel 7 &nbsp;...</p>
-                <a href="#" className="read-more">
-                  Read More
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card animate fade-in-up delay-3">
-              <div className="project-image">
-                <img src="/src/assets/projects/mintira.jpg" alt="Official Web Landing Page Organization" />
-              </div>
-              <div className="project-content">
-                <h3>Official Web Landing Page Organization</h3>
-                <p>Official Web Landing Page Organization dibuat menggunakan laravel 7 &nbsp;...</p>
-                <a href="#" className="read-more">
-                  Read More
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
 
           <button className="scroll-button right" onClick={() => scrollProjects("right")}>
@@ -309,6 +290,49 @@ function Home() {
           </button>
         </div>
       </section>
+
+      {/* Project Detail Modal */}
+      {selectedProject && (
+        <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setSelectedProject(null)}>
+              ×
+            </button>
+            <div className="modal-body">
+              <img src={selectedProject.image} alt={selectedProject.title} />
+              <h2>{selectedProject.title}</h2>
+              <p className="project-description">{selectedProject.fullDescription}</p>
+
+              <div className="project-details">
+                <h3>Technologies Used</h3>
+                <div className="tech-stack">
+                  {selectedProject.technologies.map((tech, index) => (
+                    <span key={index} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <h3>Key Features</h3>
+                <ul className="feature-list">
+                  {selectedProject.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="project-links">
+                <a href={selectedProject.demoLink} className="demo-link" target="_blank" rel="noopener noreferrer">
+                  Live Demo
+                </a>
+                <a href={selectedProject.githubLink} className="github-link" target="_blank" rel="noopener noreferrer">
+                  View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Social Links */}
       <footer className="footer-section">

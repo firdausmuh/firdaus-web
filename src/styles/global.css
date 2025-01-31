@@ -1,0 +1,13 @@
+/* Global styles that were in App.css */
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Add other global styles */
