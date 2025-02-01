@@ -8,11 +8,11 @@ function ProjectDetail() {
   const projects = [
     {
       id: 1,
-      title: "Sistem Manajemen Arsip UMY",
+      title: "Sistem Dashboard Talent Management",
       description:
-        "Sistem Manajemen Arsip adalah pekerjaan menyimpan surat atau dokumen-dokumen kegiatan-kegiatan yang dilakukan oleh Universitas Muhammadiyah Yogyakarta. Sistem ini membantu dalam pengarsipan, pencarian, dan pengelolaan dokumen secara efisien.",
-      technologies: ["Laravel", "MySQL", "Bootstrap", "jQuery"],
-      features: ["Manajemen dokumen digital", "Pencarian dokumen", "Kategorisasi arsip", "Laporan dan statistik"],
+        "Sistem dashboard talent management adalah alat atau platform yang digunakan oleh HRD dan manajemen untuk memantau dan mengelola bakat dalam perusahaan. Platform ini mengintegrasikan beberapa elemen kunci seperti rekrutmen, manajemen kinerja, perencanaan suksesi, pembelajaran dan pengembangan, serta manajemen kompensasi.",
+      technologies: ["C++", "Power BI", "Python", "SQL", "R", "Tableau"],
+      features: ["Pelaporan", "Manajemenr Kinerja", "Keterlibatan Talenta", "Pembelajaran dan Pengembangan", "Talent Management", "Talent Pipeline"],
       image: "/src/assets/projects/mintira.jpg",
       demoLink: "#",
       githubLink: "#",
