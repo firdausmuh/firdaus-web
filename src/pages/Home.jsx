@@ -79,7 +79,63 @@ function Home() {
       demoLink: "#",
       githubLink: "#",
     },
-    // Add other projects...
+    {
+      id: 2,
+      title: "Aplikasi Agrolink",
+      shortDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      fullDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+      features: ["Pembelian dan Penjualan", "Pencarian Produk", "Pembayaran Online", "Pengiriman dan Pengantaran", "Pembayaran Online", "Pengiriman dan Pengantaran"],
+      image: "/src/assets/projects/agrolink.jpg",
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 3,
+      title: "Portfolio Website",
+      shortDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      fullDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+      features: ["Pembelian dan Penjualan", "Pencarian Produk", "Pembayaran Online", "Pengiriman dan Pengantaran", "Pembayaran Online", "Pengiriman dan Pengantaran"],
+      image: "/src/assets/projects/webself.jpg",
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 4,
+      title: "Web AI Chatbot",
+      shortDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      fullDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+      features: ["Pembelian dan Penjualan", "Pencarian Produk", "Pembayaran Online", "Pengiriman dan Pengantaran", "Pembayaran Online", "Pengiriman dan Pengantaran"],
+      image: "/src/assets/projects/chatbotAI.jpg",
+      demoLink: "#",
+      githubLink: "#",
+    },
+    {
+      id: 5,
+      title: "Expense Tracker App",
+      shortDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      fullDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+      features: ["Pembelian dan Penjualan", "Pencarian Produk", "Pembayaran Online", "Pengiriman dan Pengantaran", "Pembayaran Online", "Pengiriman dan Pengantaran"],
+      image: "/src/assets/projects/expenseTracker.jpg",
+      demoLink: "#",
+      githubLink: "#",
+    },
+
+    {
+      id: 6,
+      title: "System Booking",
+      shortDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      fullDescription: "Aplikasi Agrolink adalah platform digital yang membantu petani dan pengusaha pertanian untuk menjual produk pertanian secara online.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+      features: ["Pembelian dan Penjualan", "Pencarian Produk", "Pembayaran Online", "Pengiriman dan Pengantaran", "Pembayaran Online", "Pengiriman dan Pengantaran"],
+      image: "/src/assets/projects/systemBookin.jpg",
+      demoLink: "#",
+      githubLink: "#",
+    },
+    // Add other pjects...
   ];
 
   return (
@@ -295,9 +351,7 @@ function Home() {
       {selectedProject && (
         <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelectedProject(null)}>
-              ×
-            </button>
+            <button className="modal-close" onClick={() => setSelectedProject(null)}></button>
             <div className="modal-body">
               <img src={selectedProject.image} alt={selectedProject.title} />
               <h2>{selectedProject.title}</h2>
